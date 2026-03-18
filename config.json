@@ -1,0 +1,6 @@
+{
+  "root_folder": "data/新增疑问病例/新增疑问病例/新增疑问病例小图",
+  "resume_path": "weight/9c_meta_b3_768_512_ext_18ep_best_20_fold0.pth",
+  "single_img_path": "data/model_pic/",
+  "save_path": "output/"
+}
