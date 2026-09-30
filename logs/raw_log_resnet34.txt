@@ -1,0 +1,1 @@
+Mon Jun 17 17:15:20 2024 Fold 0, Epoch 1, lr: 0.0000300, train loss: 0.71914, valid loss: 0.31294, acc: 88.1230, auc: 0.990640, auc_20: 0.990393.

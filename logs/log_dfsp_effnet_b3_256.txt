@@ -1,0 +1,66 @@
+================================================================================
+DFSPAIM Training Log
+================================================================================
+Experiment:        DFSPAIM Table 2 - EfficientNet-B3 256x256
+Kernel type:       dfsp_effnet_b3_256
+Model:             efficientnet_b3
+Random seed:       0
+CUDA devices:      0
+Normalized at:     Wed Sep 30 17:58:38 2026
+
+Command line:
+python train.py \
+  --kernel-type dfsp_effnet_b3_256 \
+  --data-dir ./data \
+  --data-folder 256 \
+  --image-size 256 \
+  --enet-type efficientnet_b3 \
+  --out-dim 5 \
+  --batch-size 8 \
+  --num-workers 1 \
+  --init-lr 3e-05 \
+  --n-epochs 1 \
+  --n-meta-dim 512,128 \
+  --fold 0,1,2,3,4 \
+  --model-dir ./weight \
+  --log-dir ./logs \
+  --CUDA_VISIBLE_DEVICES 0 \
+  --use-meta \
+  --use-amp
+
+Configuration snapshot:
+  CUDA_VISIBLE_DEVICES: 0
+  batch_size: 8
+  class_map_file: ./class_map.json
+  data_dir: ./data
+  data_folder: 256
+  enet_type: efficientnet_b3
+  fold: 0,1,2,3,4
+  image_size: 256
+  init_lr: 3e-05
+  kernel_type: dfsp_effnet_b3_256
+  log_dir: ./logs
+  model_dir: ./weight
+  n_epochs: 1
+  n_meta_dim: 512,128
+  num_workers: 1
+  out_dim: 5
+  seed: 0
+  use_amp: True
+  use_meta: True
+
+Class mapping (from class_map.json):
+  0 -> CD (Classical Dermatofibrosarcoma Protuberans)
+  1 -> FD (Fibrosarcomatous DFSP)
+  2 -> MD (Myxoid Dermatofibrosarcoma Protuberans)
+  3 -> BFH (Benign Fibrous Histiocytoma)
+  4 -> UPS (Undifferentiated Pleomorphic Sarcoma)
+
+Saved models:
+  - dfsp_effnet_b3_256_best_fold0.pth
+  - dfsp_effnet_b3_256_final_fold0.pth
+
+================================================================================
+Per-epoch metrics
+================================================================================
+Mon May 27 10:29:17 2024 Fold 0, Epoch 1, lr: 0.0000300, train loss: 0.87258, valid loss: 0.44444, acc: 83.1806, auc: 0.979689, auc_20: 0.979487.

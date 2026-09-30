@@ -1,0 +1,23 @@
+{
+  "experiment_name": "DFSPAIM Table 2 - ResNet34 256x256",
+  "kernel_type": "dfsp_resnet34_256",
+  "enet_type": "resnet34",
+  "data_dir": "./data",
+  "data_folder": 256,
+  "image_size": 256,
+  "out_dim": 5,
+  "batch_size": 8,
+  "num_workers": 1,
+  "init_lr": 3e-05,
+  "n_epochs": 1,
+  "use_meta": true,
+  "use_amp": true,
+  "n_meta_dim": "512,128",
+  "fold": "0,1,2,3,4",
+  "seed": 0,
+  "model_dir": "./weight",
+  "log_dir": "./logs",
+  "CUDA_VISIBLE_DEVICES": "0",
+  "class_map_file": "./class_map.json",
+  "notes": "Configuration used to reproduce the ResNet34 row in Table 2. n_epochs is set to 1 because the actual experiments were trained for a single epoch; update this value if re-running with the default 18-epoch schedule."
+}

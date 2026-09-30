@@ -1,0 +1,29 @@
+# DFSPAIM Python dependencies
+# Tested with Python 3.6+ and PyTorch 1.7+
+# For GPU support, install a CUDA-enabled PyTorch build from https://pytorch.org
+
+# Core deep learning
+torch>=1.7.0
+torchvision>=0.8.0
+
+# Model backbones
+geffnet>=1.0.0                # EfficientNet-B3
+pretrainedmodels>=0.7.4       # Xception
+
+# Data processing and augmentation
+numpy>=1.19.0
+pandas>=1.1.0
+opencv-python>=4.5.0
+albumentations>=0.5.0
+Pillow>=8.0.0
+
+# Training utilities
+tqdm>=4.50.0
+scikit-learn>=0.24.0
+
+# Visualization and interpretability
+matplotlib>=3.3.0
+pytorch-grad-cam>=0.2.1
+
+# Spreadsheet output (used in predict.py)
+openpyxl>=3.0.0
